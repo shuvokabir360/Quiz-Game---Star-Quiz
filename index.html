@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="description" content="World Star Quiz 3D — An immersive, futuristic 3D animated trivia game where you guess the home country of famous international football stars, actors, singers, leaders, and cultural icons." />
+  <meta name="theme-color" content="#030712" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="StarQuiz 3D" />
+  <meta name="application-name" content="StarQuiz 3D" />
+  <meta name="msapplication-TileColor" content="#030712" />
+
+  <link rel="manifest" href="/Quiz-Game---Star-Quiz/manifest.webmanifest" />
+  <link rel="icon" type="image/svg+xml" href="/Quiz-Game---Star-Quiz/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/Quiz-Game---Star-Quiz/icons/favicon-32.png" />
+  <link rel="apple-touch-icon" href="/Quiz-Game---Star-Quiz/icons/apple-touch-icon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/Quiz-Game---Star-Quiz/icons/apple-touch-icon.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="/Quiz-Game---Star-Quiz/icons/icon-192.png" />
+  <link rel="apple-touch-icon" sizes="512x512" href="/Quiz-Game---Star-Quiz/icons/icon-512.png" />
+  <title>World Star Quiz 3D — Global Celebrity Trivia Experience</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=Tiro+Bangla:ital@0;1&display=swap" rel="stylesheet">
+  
+  <script type="module" crossorigin src="/Quiz-Game---Star-Quiz/assets/index-B-KbW1xH.js"></script>
+  <link rel="stylesheet" crossorigin href="/Quiz-Game---Star-Quiz/assets/index-C8JxjZ9J.css">
+</head>
+<body>
+  <div class="desktop-viewport-wrapper">
+    <main class="game-viewport-9-16" id="game-app-root" role="main">
+      <!-- 3D Three.js Background Canvas -->
+      <div class="three-canvas-container" id="three-canvas-slot" aria-hidden="true"></div>
+
+      <!-- Main Game UI Layer -->
+      <div class="game-ui-overlay">
+        <!-- Top Header & Status -->
+        <div id="header-slot"></div>
+
+        <!-- Main Quiz Stage -->
+        <section class="quiz-main-stage" aria-label="Celebrity Trivia Arena">
+          <div id="portrait-slot"></div>
+          <div class="timer-container-slot" id="timer-slot"></div>
+          <div class="question-container-slot" id="question-slot"></div>
+          <div class="choice-container-slot" id="choice-slot"></div>
+        </section>
+
+        <!-- Bottom Game Navigation & Action Controls -->
+        <div class="bottom-controls-slot" id="controls-slot"></div>
+
+        <!-- Modals & Drawers -->
+        <div id="reveal-slot"></div>
+        <div id="results-slot"></div>
+        <div id="settings-slot"></div>
+        <div id="admin-slot"></div>
+      </div>
+    </main>
+  </div>
+
+</body>
+</html>
