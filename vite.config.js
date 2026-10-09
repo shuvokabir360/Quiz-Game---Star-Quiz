@@ -1,13 +1,33 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: process.env.NODE_ENV === 'production' ? '/Quiz-Game---Star-Quiz/' : '/',
+  base: './',
+  plugins: [
+    {
+      name: 'dev-html-transform',
+      apply: 'serve',
+      transformIndexHtml(html) {
+        return html
+          .replace(
+            /<script type="module" crossorigin src=".*?"><\/script>/,
+            '<script type="module" src="/src/main.js"></script>'
+          )
+          .replace(
+            /<link rel="stylesheet" crossorigin href=".*?">/,
+            ''
+          );
+      }
+    }
+  ],
   root: '.',
   publicDir: 'public',
-  server: {
+    server: {
     port: 3000,
     open: false,
     host: true,
+    watch: {
+      ignored: ['**/docs/**', '**/dist/**', '**/assets/**']
+    },
     proxy: {
       '/api': {
         target: 'http://localhost:3001',
