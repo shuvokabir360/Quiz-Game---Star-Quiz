@@ -26,7 +26,7 @@ export default defineConfig({
     open: false,
     host: true,
     watch: {
-      ignored: ['**/docs/**', '**/dist/**', '**/assets/**']
+      ignored: ['**/docs/**', '**/dist/**', '**/assets/**', '**/images/**', '**/icons/**']
     },
     proxy: {
       '/api': {

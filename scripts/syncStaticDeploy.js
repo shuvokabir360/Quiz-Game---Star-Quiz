@@ -7,7 +7,6 @@ const __dirname = path.dirname(__filename);
 const rootDir = path.resolve(__dirname, '..');
 const distDir = path.join(rootDir, 'dist');
 const docsDir = path.join(rootDir, 'docs');
-const assetsDir = path.join(rootDir, 'assets');
 
 console.log('[DeploySync] Synchronizing production build for GitHub Pages...');
 
@@ -17,33 +16,53 @@ if (!fs.existsSync(distDir)) {
   process.exit(1);
 }
 
-// 2. Copy dist/assets -> ./assets
-if (fs.existsSync(assetsDir)) {
-  fs.rmSync(assetsDir, { recursive: true, force: true });
+// 2. Folders to sync from dist -> root
+const foldersToSync = ['assets', 'images', 'icons'];
+for (const folder of foldersToSync) {
+  const src = path.join(distDir, folder);
+  const dest = path.join(rootDir, folder);
+  if (fs.existsSync(src)) {
+    if (fs.existsSync(dest)) {
+      fs.rmSync(dest, { recursive: true, force: true });
+    }
+    fs.cpSync(src, dest, { recursive: true });
+    console.log(`[DeploySync] Copied dist/${folder} -> ./${folder}`);
+  }
 }
-fs.cpSync(path.join(distDir, 'assets'), assetsDir, { recursive: true });
-console.log('[DeploySync] Copied dist/assets -> ./assets');
 
-// 3. Copy dist/ -> ./docs (for GitHub Pages /docs folder support)
+// 3. Static files to sync from dist -> root
+const filesToSync = [
+  'index.html',
+  'manifest.json',
+  'manifest.webmanifest',
+  'sw.js',
+  'favicon.svg',
+  'apple-touch-icon.png',
+  '.nojekyll'
+];
+for (const file of filesToSync) {
+  const src = path.join(distDir, file);
+  const dest = path.join(rootDir, file);
+  if (fs.existsSync(src)) {
+    fs.copyFileSync(src, dest);
+    console.log(`[DeploySync] Synced dist/${file} -> ./${file}`);
+  }
+}
+
+// 4. Ensure .nojekyll exists in root
+const noJekyllPath = path.join(rootDir, '.nojekyll');
+if (!fs.existsSync(noJekyllPath)) {
+  fs.writeFileSync(noJekyllPath, '# Disable Jekyll on GitHub Pages\n', 'utf8');
+}
+
+// 5. Copy full dist to docs/ (supporting both root and /docs configs)
 if (fs.existsSync(docsDir)) {
   fs.rmSync(docsDir, { recursive: true, force: true });
 }
 fs.cpSync(distDir, docsDir, { recursive: true });
-// Remove .git if inside docs
 if (fs.existsSync(path.join(docsDir, '.git'))) {
   fs.rmSync(path.join(docsDir, '.git'), { recursive: true, force: true });
 }
-console.log('[DeploySync] Copied dist -> ./docs');
+console.log('[DeploySync] Synced full dist -> ./docs');
 
-// 4. Copy dist/index.html -> ./index.html
-fs.copyFileSync(path.join(distDir, 'index.html'), path.join(rootDir, 'index.html'));
-console.log('[DeploySync] Synced dist/index.html -> ./index.html');
-
-// 5. Ensure .nojekyll exists in root
-const noJekyllPath = path.join(rootDir, '.nojekyll');
-if (!fs.existsSync(noJekyllPath)) {
-  fs.writeFileSync(noJekyllPath, '# Disable Jekyll on GitHub Pages\n', 'utf8');
-  console.log('[DeploySync] Created .nojekyll in root');
-}
-
-console.log('[DeploySync] Production synchronization complete! GitHub Pages is fully supported across all configs.');
+console.log('[DeploySync] All production assets, images, icons and files synchronized to root and docs!');
