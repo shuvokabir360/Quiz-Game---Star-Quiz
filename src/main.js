@@ -1,9 +1,12 @@
 import { AppController } from './app/AppController.js';
 import { initPWA } from './utils/pwaInstaller.js';
+import { initWakeLock } from './utils/wakeLock.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   // Initialize PWA installation and Service Worker support
   initPWA();
+  // Keep mobile and desktop screen awake while game is open
+  initWakeLock();
 
   const domElements = {
     threeCanvas: document.getElementById('three-canvas-slot'),

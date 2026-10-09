@@ -123,6 +123,10 @@ export class SettingsPanel {
                 <span>Show Capital City</span>
                 <input type="checkbox" id="set-show-capital" class="switch-checkbox" />
               </div>
+              <div class="toggle-row">
+                <span>Keep Screen Awake / স্ক্রিন অন রাখুন 💡</span>
+                <input type="checkbox" id="set-keep-awake" class="switch-checkbox" checked />
+              </div>
             </div>
 
             <!-- Install App / Add to Home Screen -->
@@ -159,6 +163,7 @@ export class SettingsPanel {
     this.reducedMotionCheckbox = this.container.querySelector('#set-reduced-motion');
     this.showNameCheckbox = this.container.querySelector('#set-show-name');
     this.showCapitalCheckbox = this.container.querySelector('#set-show-capital');
+    this.keepAwakeCheckbox = this.container.querySelector('#set-keep-awake');
 
     this.bindEvents();
   }
@@ -231,6 +236,10 @@ export class SettingsPanel {
 
     this.showCapitalCheckbox.addEventListener('change', e => {
       this.settings.showCapital = e.target.checked;
+    });
+
+    this.keepAwakeCheckbox.addEventListener('change', e => {
+      this.settings.keepAwake = e.target.checked;
     });
   }
 
@@ -366,6 +375,7 @@ export class SettingsPanel {
     this.reducedMotionCheckbox.checked = !!this.settings.reducedMotion;
     this.showNameCheckbox.checked = !!this.settings.showName;
     this.showCapitalCheckbox.checked = !!this.settings.showCapital;
+    this.keepAwakeCheckbox.checked = this.settings.keepAwake !== false;
 
     this.backdrop.classList.remove('hidden');
   }

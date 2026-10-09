@@ -17,6 +17,7 @@ import { AdminPanel } from '../ui/AdminPanel.js';
 import { sound } from '../utils/audio.js';
 import { storage, STORAGE_KEYS, saveSettings, saveHighScore, loadHighScore } from '../utils/storage.js';
 import { preloadNextImage } from '../utils/imageLoader.js';
+import { setWakeLockEnabled } from '../utils/wakeLock.js';
 
 import defaultPeople from '../data/people.json';
 import countriesData from '../data/countries.json';
@@ -446,6 +447,7 @@ export class AppController {
     this.header.setSoundState(this.state.settings.soundEnabled);
     this.sceneManager.setQuality(this.state.settings.vfxQuality);
     this.sceneManager.setReducedMotion(this.state.settings.reducedMotion);
+    setWakeLockEnabled(this.state.settings.keepAwake !== false);
     this.syncFilterRules();
     this.updateLocalization();
 

@@ -72,6 +72,7 @@ export const DEFAULT_SETTINGS = {
   reducedMotion: false,
   showName: true,
   showCapital: true,
+  keepAwake: true,
   challengeQuestionsCount: 10
 };
 
