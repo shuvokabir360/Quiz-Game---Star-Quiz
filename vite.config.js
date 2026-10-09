@@ -2,23 +2,7 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
   base: './',
-  plugins: [
-    {
-      name: 'dev-html-transform',
-      apply: 'serve',
-      transformIndexHtml(html) {
-        return html
-          .replace(
-            /<script type="module" crossorigin src=".*?"><\/script>/,
-            '<script type="module" src="/src/main.js"></script>'
-          )
-          .replace(
-            /<link rel="stylesheet" crossorigin href=".*?">/,
-            ''
-          );
-      }
-    }
-  ],
+  plugins: [],
   root: '.',
   publicDir: 'public',
     server: {

@@ -1,3 +1,6 @@
+import './styles/main.css';
+import './styles/game.css';
+import './styles/animations.css';
 import { AppController } from './app/AppController.js';
 import { initPWA } from './utils/pwaInstaller.js';
 import { initWakeLock } from './utils/wakeLock.js';

@@ -16,6 +16,26 @@ if (!fs.existsSync(distDir)) {
   process.exit(1);
 }
 
+// Normalize dist/index.html manifest and icon links so they point cleanly to static assets
+const distIndex = path.join(distDir, 'index.html');
+if (fs.existsSync(distIndex)) {
+  let html = fs.readFileSync(distIndex, 'utf8');
+
+  // Point manifest directly to ./manifest.json
+  html = html.replace(/<link\s+rel=["']manifest["'][^>]*>/i, '<link rel="manifest" href="./manifest.json" />');
+
+  // Normalize icons to clean static paths
+  html = html.replace(/<link\s+rel=["']icon["']\s+type=["']image\/svg\+xml["'][^>]*>/i, '<link rel="icon" type="image/svg+xml" href="./favicon.svg" />');
+  html = html.replace(/<link\s+rel=["']icon["']\s+type=["']image\/png["'][^>]*>/i, '<link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32.png" />');
+  html = html.replace(/<link\s+rel=["']apple-touch-icon["']\s+href=[^>]*>/i, '<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />');
+  html = html.replace(/<link\s+rel=["']apple-touch-icon["']\s+sizes=["']180x180["'][^>]*>/i, '<link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png" />');
+  html = html.replace(/<link\s+rel=["']apple-touch-icon["']\s+sizes=["']192x192["'][^>]*>/i, '<link rel="apple-touch-icon" sizes="192x192" href="./icons/icon-192.png" />');
+  html = html.replace(/<link\s+rel=["']apple-touch-icon["']\s+sizes=["']512x512["'][^>]*>/i, '<link rel="apple-touch-icon" sizes="512x512" href="./icons/icon-512.png" />');
+
+  fs.writeFileSync(distIndex, html, 'utf8');
+  console.log('[DeploySync] Normalized manifest & icon paths in dist/index.html');
+}
+
 // 2. Folders to sync from dist -> root
 const foldersToSync = ['assets', 'images', 'icons'];
 for (const folder of foldersToSync) {

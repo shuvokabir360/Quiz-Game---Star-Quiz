@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "server": "node server.js",
-    "build": "vite build && node scripts/syncStaticDeploy.js",
+    "build": "node scripts/prepareBuild.js && vite build && node scripts/syncStaticDeploy.js",
     "preview": "vite preview",
     "test": "vitest run"
   },

@@ -27,8 +27,9 @@ export function initPWA() {
   // 1. Register Service Worker
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
+      const swUrl = new URL('./sw.js', window.location.href).href;
       navigator.serviceWorker
-        .register('/sw.js', { scope: '/' })
+        .register(swUrl)
         .then((reg) => {
           console.log('[PWA] Service Worker registered successfully:', reg.scope);
         })

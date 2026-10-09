@@ -1,14 +1,15 @@
 // Service Worker for World Star Quiz 3D (PWA)
-const CACHE_NAME = 'wsq3d-v1.1';
+const CACHE_NAME = 'wsq3d-v1.2';
 
 const STATIC_ASSETS = [
-  '/',
-  '/index.html',
-  '/manifest.webmanifest',
-  '/favicon.svg',
-  '/icons/icon-192.png',
-  '/icons/icon-512.png',
-  '/icons/apple-touch-icon.png'
+  './',
+  './index.html',
+  './manifest.json',
+  './manifest.webmanifest',
+  './favicon.svg',
+  './icons/icon-192.png',
+  './icons/icon-512.png',
+  './icons/apple-touch-icon.png'
 ];
 
 // Install: Cache critical app shell
@@ -49,8 +50,8 @@ self.addEventListener('fetch', (event) => {
   // For images and media: Cache-First with Network Fallback
   if (
     request.destination === 'image' ||
-    url.pathname.startsWith('/images/') ||
-    url.pathname.startsWith('/icons/')
+    url.pathname.includes('/images/') ||
+    url.pathname.includes('/icons/')
   ) {
     event.respondWith(
       caches.match(request).then((cachedResponse) => {
@@ -78,7 +79,7 @@ self.addEventListener('fetch', (event) => {
   if (request.mode === 'navigate') {
     event.respondWith(
       fetch(request).catch(() => {
-        return caches.match('/') || caches.match('/index.html');
+        return caches.match('./') || caches.match('./index.html') || caches.match('/');
       })
     );
     return;
