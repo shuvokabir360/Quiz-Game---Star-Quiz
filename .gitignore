@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Production output (built by GitHub Actions on deployment)
+dist/
+
+# Local env & logs
+.env
+.env.*
+*.log
+npm-debug.log*
+
+# System & OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

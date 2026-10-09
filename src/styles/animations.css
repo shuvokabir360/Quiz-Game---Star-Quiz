@@ -1,0 +1,91 @@
+@keyframes timerPulse {
+  0% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 10px rgba(255, 8, 68, 0.4));
+  }
+  100% {
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 20px rgba(255, 8, 68, 0.9));
+  }
+}
+
+@keyframes glowBorder {
+  0% {
+    border-color: rgba(0, 242, 254, 0.3);
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.2);
+  }
+  50% {
+    border-color: rgba(168, 85, 247, 0.5);
+    box-shadow: 0 0 25px rgba(168, 85, 247, 0.35);
+  }
+  100% {
+    border-color: rgba(0, 242, 254, 0.3);
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.2);
+  }
+}
+
+@keyframes circleRainbowPulse {
+  0% {
+    border-color: #00f2fe;
+    box-shadow: 0 0 18px rgba(0, 242, 254, 0.7);
+  }
+  33% {
+    border-color: #a855f7;
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.7);
+  }
+  66% {
+    border-color: #facc15;
+    box-shadow: 0 0 20px rgba(250, 204, 21, 0.7);
+  }
+  100% {
+    border-color: #00f2fe;
+    box-shadow: 0 0 18px rgba(0, 242, 254, 0.7);
+  }
+}
+
+@keyframes revealPopIn {
+  0% {
+    transform: scale(0.7) translateY(30px);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.04) translateY(-4px);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+.reveal-pop-in {
+  animation: revealPopIn 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes spinLoader {
+  to { transform: rotate(360deg); }
+}
+
+.image-loader-spinner {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  border: 3px solid rgba(0, 242, 254, 0.15);
+  border-top-color: var(--color-cyan);
+  border-radius: 50%;
+  animation: spinLoader 0.8s linear infinite;
+  display: none;
+}
+
+.card-image-frame.loading .image-loader-spinner {
+  display: block;
+}
+
+/* Reduced Motion Overrides */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
