@@ -74,7 +74,8 @@ export class AdminPanel {
                   <select id="adm-category" required>
                     <option value="footballer">⚽ Footballer (ফুটবল তারকা)</option>
                     <option value="singer">🎤 Musician / Singer (সঙ্গীতশিল্পী / গায়ক)</option>
-                    <option value="actor">🎬 Actor / Actress (অভিনেতা / অভিনেত্রী)</option>
+                    <option value="actor">🎬 Actor (অভিনেতা / নায়ক)</option>
+                    <option value="actress">💃 Actress / Heroine (নায়িকা / অভিনেত্রী)</option>
                     <option value="sports">🏆 Other Sports Star (অন্যান্য ক্রীড়াবিদ)</option>
                     <option value="cricketer">🏏 Cricketer (ক্রিকেটার)</option>
                     <option value="youtuber">🔴 YouTuber (ইউটিউবার)</option>

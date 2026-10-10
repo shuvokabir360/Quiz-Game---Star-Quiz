@@ -107,6 +107,7 @@ export class PortraitCard {
       footballer: '⚽',
       sports: '🏆',
       cricketer: '🏏',
+      actress: '💃',
       actor: '🎬',
       singer: '🎤',
       youtuber: '🔴',

@@ -270,6 +270,7 @@ export class SettingsPanel {
       footballer: '⚽',
       sports: '🏆',
       cricketer: '🏏',
+      actress: '💃',
       actor: '🎬',
       singer: '🎤',
       scientist: '🔬',

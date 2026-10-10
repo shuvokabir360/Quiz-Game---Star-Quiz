@@ -130,6 +130,7 @@ export class CountryReveal {
         footballer: '⚽',
         sports: '🏆',
         cricketer: '🏏',
+        actress: '💃',
         actor: '🎬',
         singer: '🎤',
         youtuber: '🔴',

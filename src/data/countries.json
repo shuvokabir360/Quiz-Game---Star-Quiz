@@ -55,5 +55,6 @@
   { "code": "ZW", "name": "Zimbabwe", "nameBn": "জিম্বাবুয়ে", "flag": "🇿🇼", "capital": "Harare", "continent": "Africa" },
   { "code": "TT", "name": "Trinidad and Tobago", "nameBn": "ত্রিনিদাদ ও টোবাগো", "flag": "🇹🇹", "capital": "Port of Spain", "continent": "North America" },
   { "code": "GY", "name": "Guyana", "nameBn": "গায়ানা", "flag": "🇬🇾", "capital": "Georgetown", "continent": "South America" },
-  { "code": "NP", "name": "Nepal", "nameBn": "নেপাল", "flag": "🇳🇵", "capital": "Kathmandu", "continent": "Asia" }
+  { "code": "NP", "name": "Nepal", "nameBn": "নেপাল", "flag": "🇳🇵", "capital": "Kathmandu", "continent": "Asia" },
+  { "code": "IL", "name": "Israel", "nameBn": "ইসরায়েল", "flag": "🇮🇱", "capital": "Jerusalem", "continent": "Asia" }
 ]
