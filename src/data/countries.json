@@ -40,5 +40,14 @@
   { "code": "IR", "name": "Iran", "nameBn": "ইরান", "flag": "🇮🇷", "capital": "Tehran", "continent": "Asia" },
   { "code": "CN", "name": "China", "nameBn": "চীন", "flag": "🇨🇳", "capital": "Beijing", "continent": "Asia" },
   { "code": "SA", "name": "Saudi Arabia", "nameBn": "সৌদি আরব", "flag": "🇸🇦", "capital": "Riyadh", "continent": "Asia" },
-  { "code": "TN", "name": "Tunisia", "nameBn": "তিউনিসিয়া", "flag": "🇹🇳", "capital": "Tunis", "continent": "Africa" }
+  { "code": "TN", "name": "Tunisia", "nameBn": "তিউনিসিয়া", "flag": "🇹🇳", "capital": "Tunis", "continent": "Africa" },
+  { "code": "RU", "name": "Russia", "nameBn": "রাশিয়া", "flag": "🇷🇺", "capital": "Moscow", "continent": "Europe" },
+  { "code": "SG", "name": "Singapore", "nameBn": "সিঙ্গাপুর", "flag": "🇸🇬", "capital": "Singapore", "continent": "Asia" },
+  { "code": "MY", "name": "Malaysia", "nameBn": "মালয়েশিয়া", "flag": "🇲🇾", "capital": "Kuala Lumpur", "continent": "Asia" },
+  { "code": "CU", "name": "Cuba", "nameBn": "কিউবা", "flag": "🇨🇺", "capital": "Havana", "continent": "North America" },
+  { "code": "VE", "name": "Venezuela", "nameBn": "ভেনিজুয়েলা", "flag": "🇻🇪", "capital": "Caracas", "continent": "South America" },
+  { "code": "PS", "name": "Palestine", "nameBn": "ফিলিস্তিন", "flag": "🇵🇸", "capital": "Jerusalem", "continent": "Asia" },
+  { "code": "GH", "name": "Ghana", "nameBn": "ঘানা", "flag": "🇬🇭", "capital": "Accra", "continent": "Africa" },
+  { "code": "KE", "name": "Kenya", "nameBn": "কেনিয়া", "flag": "🇰🇪", "capital": "Nairobi", "continent": "Africa" },
+  { "code": "NZ", "name": "New Zealand", "nameBn": "নিউজিল্যান্ড", "flag": "🇳🇿", "capital": "Wellington", "continent": "Oceania" }
 ]

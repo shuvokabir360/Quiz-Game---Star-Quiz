@@ -122,6 +122,19 @@ app.post('/api/upload-celebrity', upload.single('photo'), (req, res) => {
       imagePath = `/images/people/${slug}.jpg`;
     }
 
+    const newPerson = {
+      id: req.body.id || `custom-${Date.now()}`,
+      name: name.trim(),
+      category: category.trim(),
+      country: country.name,
+      countryCode: country.code,
+      flag: country.flag,
+      capital: country.capital,
+      image: imagePath,
+      difficulty,
+      description: description.trim()
+    };
+
     const people = getPeople();
     const existingIndex = people.findIndex(
       p => (req.body.id && p.id === req.body.id) || p.name.trim().toLowerCase() === name.trim().toLowerCase()

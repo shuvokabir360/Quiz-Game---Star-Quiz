@@ -13,6 +13,8 @@ const CATEGORY_THEMES = {
   youtuber: { bg1: '#eb3349', bg2: '#f45c43', bg3: '#31102b', accent: '#ff416c', icon: '🔴' },
   influencer: { bg1: '#8a2387', bg2: '#e94057', bg3: '#f27121', accent: '#f72585', icon: '✨' },
   leader: { bg1: '#0f0c29', bg2: '#302b63', bg3: '#24243e', accent: '#ffd700', icon: '🏛️' },
+  politician: { bg1: '#0a192f', bg2: '#1b2a4a', bg3: '#0f172a', accent: '#38bdf8', icon: '🗳️' },
+  gov_head: { bg1: '#064e3b', bg2: '#065f46', bg3: '#022c22', accent: '#34d399', icon: '👔' },
   historical: { bg1: '#2c3e50', bg2: '#3498db', bg3: '#2980b9', accent: '#00e5ff', icon: '📜' },
   scientist: { bg1: '#0a192f', bg2: '#172a45', bg3: '#020c1b', accent: '#00f5d4', icon: '🔬' },
   poet: { bg1: '#1a102f', bg2: '#2d1b4e', bg3: '#0f051d', accent: '#e0aaff', icon: '✒️' },

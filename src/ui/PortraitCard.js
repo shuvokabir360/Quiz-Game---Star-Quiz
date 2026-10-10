@@ -111,6 +111,8 @@ export class PortraitCard {
       youtuber: '🔴',
       influencer: '✨',
       leader: '🏛️',
+      politician: '🗳️',
+      gov_head: '👔',
       historical: '📜',
       scientist: '🔬',
       poet: '✒️',

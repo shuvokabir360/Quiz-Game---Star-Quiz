@@ -275,6 +275,8 @@ export class SettingsPanel {
       youtuber: '🔴',
       influencer: '✨',
       leader: '🏛️',
+      politician: '🗳️',
+      gov_head: '👔',
       historical: '📜',
       poet: '✒️',
       hero: '⚔️'

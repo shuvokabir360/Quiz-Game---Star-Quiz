@@ -134,6 +134,8 @@ export class CountryReveal {
         youtuber: '🔴',
         influencer: '✨',
         leader: '🏛️',
+        politician: '🗳️',
+        gov_head: '👔',
         historical: '📜',
         scientist: '🔬',
         poet: '✒️',

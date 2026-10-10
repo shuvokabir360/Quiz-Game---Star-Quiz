@@ -79,6 +79,8 @@ export class AdminPanel {
                     <option value="youtuber">🔴 YouTuber (ইউটিউবার)</option>
                     <option value="influencer">✨ Social Media Star (সোশ্যাল মিডিয়া স্টার)</option>
                     <option value="leader">🏛️ President / Prime Minister (রাষ্ট্রনেতা)</option>
+                    <option value="politician">🗳️ Politician (রাজনীতিবিদ)</option>
+                    <option value="gov_head">👔 Head of Government (সরকারপ্রধান)</option>
                     <option value="historical">📜 Historical Figure (ঐতিহাসিক ব্যক্তিত্ব)</option>
                     <option value="scientist">🔬 Scientist & Inventor (বিজ্ঞানী ও গবেষক)</option>
                     <option value="poet">✒️ Poet & Author (কবি ও সাহিত্যিক)</option>

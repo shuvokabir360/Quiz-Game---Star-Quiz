@@ -10,6 +10,8 @@ export const VALID_CATEGORIES = [
   'youtuber',
   'influencer',
   'leader',
+  'politician',
+  'gov_head',
   'historical',
   'scientist',
   'poet',
