@@ -4,6 +4,7 @@
 
 export const VALID_CATEGORIES = [
   'footballer',
+  'cricketer',
   'sports',
   'actor',
   'singer',

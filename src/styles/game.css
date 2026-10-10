@@ -323,6 +323,13 @@
   box-shadow: 0 0 12px rgba(6, 182, 212, 0.45);
 }
 
+.cat-cricketer {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.35), rgba(245, 158, 11, 0.25)) !important;
+  border-color: #10b981 !important;
+  color: #fde047 !important;
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.45);
+}
+
 .cat-influencer, .cat-youtuber {
   background: linear-gradient(135deg, rgba(244, 63, 94, 0.3), rgba(251, 113, 133, 0.25)) !important;
   border-color: #f43f5e !important;

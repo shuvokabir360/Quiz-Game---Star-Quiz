@@ -129,6 +129,7 @@ export class CountryReveal {
       const catIcons = {
         footballer: '⚽',
         sports: '🏆',
+        cricketer: '🏏',
         actor: '🎬',
         singer: '🎤',
         youtuber: '🔴',

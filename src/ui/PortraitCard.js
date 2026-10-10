@@ -106,6 +106,7 @@ export class PortraitCard {
     const catIcons = {
       footballer: '⚽',
       sports: '🏆',
+      cricketer: '🏏',
       actor: '🎬',
       singer: '🎤',
       youtuber: '🔴',

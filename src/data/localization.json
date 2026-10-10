@@ -29,6 +29,7 @@
     "categories": {
       "all": "All People",
       "footballer": "Footballers",
+      "cricketer": "Cricketers",
       "sports": "Other Sports Stars",
       "actor": "Actors & Actresses",
       "singer": "Singers & Musicians",
@@ -108,6 +109,7 @@
     "categories": {
       "all": "সকল তারকা",
       "footballer": "ফুটবল তারকা",
+      "cricketer": "ক্রিকেটার",
       "sports": "অন্যান্য ক্রীড়াবিদ",
       "actor": "অভিনেতা ও অভিনেত্রী",
       "singer": "গায়ক ও সঙ্গীতশিল্পী",

@@ -49,5 +49,11 @@
   { "code": "PS", "name": "Palestine", "nameBn": "ফিলিস্তিন", "flag": "🇵🇸", "capital": "Jerusalem", "continent": "Asia" },
   { "code": "GH", "name": "Ghana", "nameBn": "ঘানা", "flag": "🇬🇭", "capital": "Accra", "continent": "Africa" },
   { "code": "KE", "name": "Kenya", "nameBn": "কেনিয়া", "flag": "🇰🇪", "capital": "Nairobi", "continent": "Africa" },
-  { "code": "NZ", "name": "New Zealand", "nameBn": "নিউজিল্যান্ড", "flag": "🇳🇿", "capital": "Wellington", "continent": "Oceania" }
+  { "code": "NZ", "name": "New Zealand", "nameBn": "নিউজিল্যান্ড", "flag": "🇳🇿", "capital": "Wellington", "continent": "Oceania" },
+  { "code": "LK", "name": "Sri Lanka", "nameBn": "শ্রীলঙ্কা", "flag": "🇱🇰", "capital": "Colombo", "continent": "Asia" },
+  { "code": "AF", "name": "Afghanistan", "nameBn": "আফগানিস্তান", "flag": "🇦🇫", "capital": "Kabul", "continent": "Asia" },
+  { "code": "ZW", "name": "Zimbabwe", "nameBn": "জিম্বাবুয়ে", "flag": "🇿🇼", "capital": "Harare", "continent": "Africa" },
+  { "code": "TT", "name": "Trinidad and Tobago", "nameBn": "ত্রিনিদাদ ও টোবাগো", "flag": "🇹🇹", "capital": "Port of Spain", "continent": "North America" },
+  { "code": "GY", "name": "Guyana", "nameBn": "গায়ানা", "flag": "🇬🇾", "capital": "Georgetown", "continent": "South America" },
+  { "code": "NP", "name": "Nepal", "nameBn": "নেপাল", "flag": "🇳🇵", "capital": "Kathmandu", "continent": "Asia" }
 ]

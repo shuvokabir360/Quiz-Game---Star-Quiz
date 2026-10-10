@@ -76,6 +76,7 @@ export class AdminPanel {
                     <option value="singer">🎤 Musician / Singer (সঙ্গীতশিল্পী / গায়ক)</option>
                     <option value="actor">🎬 Actor / Actress (অভিনেতা / অভিনেত্রী)</option>
                     <option value="sports">🏆 Other Sports Star (অন্যান্য ক্রীড়াবিদ)</option>
+                    <option value="cricketer">🏏 Cricketer (ক্রিকেটার)</option>
                     <option value="youtuber">🔴 YouTuber (ইউটিউবার)</option>
                     <option value="influencer">✨ Social Media Star (সোশ্যাল মিডিয়া স্টার)</option>
                     <option value="leader">🏛️ President / Prime Minister (রাষ্ট্রনেতা)</option>

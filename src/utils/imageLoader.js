@@ -8,6 +8,7 @@ const imageCache = new Map();
 const CATEGORY_THEMES = {
   footballer: { bg1: '#0f2027', bg2: '#203a43', bg3: '#2c5364', accent: '#00ffcc', icon: '⚽' },
   sports: { bg1: '#1f1c2c', bg2: '#928dab', bg3: '#141e30', accent: '#ffaa00', icon: '🏆' },
+  cricketer: { bg1: '#064e3b', bg2: '#047857', bg3: '#065f46', accent: '#fbbf24', icon: '🏏' },
   actor: { bg1: '#3a1c71', bg2: '#d76d77', bg3: '#ffaf7b', accent: '#ff007f', icon: '🎬' },
   singer: { bg1: '#130cb7', bg2: '#52e5e7', bg3: '#0f0c29', accent: '#9b51e0', icon: '🎤' },
   youtuber: { bg1: '#eb3349', bg2: '#f45c43', bg3: '#31102b', accent: '#ff416c', icon: '🔴' },
